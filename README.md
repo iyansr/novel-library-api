@@ -2,6 +2,8 @@
 
 A Collection Of Indonesian Novels API Using NodeJS MySQL ExpressJS
 
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+
 <p align="center">
   <a href="https://nodejs.org/">
     <img title="Restful API" height='200' src="https://raw.githubusercontent.com/iyansr/novel-library-api/master/img.jpg">
