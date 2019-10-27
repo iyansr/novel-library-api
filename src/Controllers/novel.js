@@ -62,6 +62,9 @@ module.exports = {
     novelModel
       .deleteNovel(id)
       .then(result => {
+        if (result.affectedRows === 0) {
+          res.json({ message: `Cannot find id ${id}` });
+        }
         res.json({
           message: 'Succes Delete '
         });
