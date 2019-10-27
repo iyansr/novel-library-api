@@ -18,7 +18,7 @@ module.exports = {
               field = 'g.genre_id';
             }
             if (field === 'status') {
-              field === 's.status_id';
+              field = 's.status_id';
             }
 
             return `${field} LIKE ? `;
