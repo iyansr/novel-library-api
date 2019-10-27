@@ -3,6 +3,8 @@
 A Collection Of Indonesian Novels API Using NodeJS MySQL ExpressJS
 
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![GitHub followers](https://img.shields.io/github/followers/iyansr?style=social)](https://github.com/iyansr?tab=followers)
 
 <p align="center">
   <a href="https://nodejs.org/">
