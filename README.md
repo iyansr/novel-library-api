@@ -42,15 +42,13 @@ $ yarn install
 3. Setup your environment variable in `.env` files (if not exists, create your own).
 
 ```env
-
 DB_HOST      = 'localhost'
 DB_USER      = 'root'
 DB_PASSWORD  = 'xxx'
 DB_DATABASE  = 'dbname'
-
 ```
 
-5. Start API server
+4. Start API server
 
 ```bash
 $ npm run server
