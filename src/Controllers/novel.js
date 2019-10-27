@@ -15,10 +15,7 @@ module.exports = {
       .catch(err => console.log(err));
   },
   addNovel: (req, res) => {
-    let date = new Date()
-      .toISOString()
-      .slice(0, 19)
-      .replace('T', ' ');
+    let date = moment().format('YYYY-MM-DD HH:mm:ss');
     let body = {
       ...req.body,
       created_at: date,
