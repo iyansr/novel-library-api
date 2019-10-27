@@ -1,6 +1,12 @@
 # 📚Novel Library API
 
-A Collection Of Indonesian Novels API Using NodeJS MySQL Express
+A Collection Of Indonesian Novels API Using NodeJS MySQL ExpressJS
+
+<p align="center">
+  <a href="https://nodejs.org/">
+    <img title="Restful API" height='200' src="https://raw.githubusercontent.com/iyansr/novel-library-api/master/img.jpg">
+  </a>
+</p>
 
 ## Build Setup
 
@@ -57,3 +63,16 @@ $ npm run server
 - `src/Routes` - Route of our app going here
 - `src/Helpers` - This folder contain file that help you simplify your code such as define the error handling
 - `src/Controllers` - This folder contain configuration files that links Models to Route
+
+---
+
+## API Docs
+
+### **Novel**
+
+| Method | Endpoint      | Description      | Request Param    | Request Body                                                                                                                 | Request Query                                                    |
+| ------ | ------------- | ---------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| GET    | /api/novel    | Get Novels       | -                | -                                                                                                                            | `title`:STRING `author`:STRING `genre`: INTEGER `status`:INTEGER |
+| POST   | /api/novel    | Add New Novel    | -                | `title`:STRING (Required) `author`:STRING (Required) `image_url`:STRING `status`:STRING (Required) `genre`:STRING (Required) | -                                                                |
+| PUT    | api/novel/:id | Edit Novel By ID | `id`: INT (UUID) | `title`:STRING (Required) `author`:STRING (Required) `image_url`:STRING `status`:STRING (Required) `genre`:STRING (Required) | -                                                                |
+| DELETE | api/novel     | Delete Novel     | -                | `id`:INT                                                                                                                     | -                                                                |
