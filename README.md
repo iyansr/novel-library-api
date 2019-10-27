@@ -8,10 +8,22 @@ A Collection Of Indonesian Novels API Using NodeJS MySQL ExpressJS
   </a>
 </p>
 
+## Table Of Contents
+
+- [Novel Library Api](#novel-library-api)
+  - [Table Of Content](#table-of-content)
+  - [Build Setup](#build-setup)
+  - [Stacks](#stacks)
+  - [Dependencies](#dependencies)
+  - [Aplication Structure](#aplication-Structure)
+  - [API Docs](#api-docs)
+    - [Novel](#novel)
+    - [Genre](#genre)
+
 ## Build Setup
 
 1. Clone repository
-   `$ git clone https://github.com/sutanlab/point-of-sales-api.git`
+   `$ git clone https://github.com/iyansr/novel-library-api.git`
 
 2. Install depedencies
 
@@ -76,3 +88,13 @@ $ npm run server
 | POST   | /api/novel    | Add New Novel    | -                | `title`:STRING (Required) `author`:STRING (Required) `image_url`:STRING `status`:STRING (Required) `genre`:STRING (Required) | -                                                                |
 | PUT    | api/novel/:id | Edit Novel By ID | `id`: INT (UUID) | `title`:STRING (Required) `author`:STRING (Required) `image_url`:STRING `status`:STRING (Required) `genre`:STRING (Required) | -                                                                |
 | DELETE | api/novel     | Delete Novel     | -                | `id`:INT                                                                                                                     | -                                                                |
+
+### **Genre**
+
+| Method | Endpoint   | Description    | Request Param | Request Body | Request Query |
+| ------ | ---------- | -------------- | ------------- | ------------ | ------------- |
+| GET    | /api/genre | Get All Genres | -             | -            | -             |
+
+---
+
+Copyright © 2019 by I Putu Saputrayana (Iyan Saputra)
