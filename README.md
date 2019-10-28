@@ -69,6 +69,7 @@ $ npm run server
 - [momentjs](https://www.npmjs.com/package/moment) - To convert dateTime from javascript format to mysql format easily
 - [mysql](https://www.npmjs.com/package/mysql) - NodeJs driver for MySQL
 - [body-parser](https://www.npmjs.com/package/body-parser) - Node.js body parsing middleware
+- [nodemon](https://www.npmjs.com/package/nodemon) - is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
 
 ## Aplication Structure
 
