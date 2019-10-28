@@ -8,5 +8,13 @@ module.exports = {
           ON b.status = s.status_id `;
 
     return query;
+  },
+  genreQueryAdd: () => {
+    let q = `INSERT INTO genres (genre, created_at, updated_at)
+                  SELECT * FROM (SELECT ?, ? AS d1, ? ) AS tmp
+                  WHERE NOT EXISTS (
+                    SELECT genre FROM genres WHERE genre = ?
+                  ) LIMIT 1`;
+    return q;
   }
 };
