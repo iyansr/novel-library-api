@@ -24,6 +24,8 @@ module.exports = {
             return `${field} LIKE ? `;
           })
           .join(' AND ');
+      } else {
+        query += 'ORDER BY b.id ASC';
       }
 
       db.query(
