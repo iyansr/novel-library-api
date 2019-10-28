@@ -29,7 +29,7 @@ module.exports = {
         console.log(result);
       })
       .catch(err => {
-        errorHandling.errorHandling(body, res);
+        errorHandling.insertNovelErrorHandling(body, res);
         console.log(err);
       });
   },
@@ -49,7 +49,7 @@ module.exports = {
         console.log(result);
       })
       .catch(err => {
-        errorHandling.errorHandling(body, res);
+        errorHandling.insertNovelErrorHandling(body, res);
         console.log(err);
       });
   },

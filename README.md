@@ -5,6 +5,7 @@ A Collection Of Indonesian Novels API Using NodeJS MySQL ExpressJS
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![GitHub followers](https://img.shields.io/github/followers/iyansr?style=social)](https://github.com/iyansr?tab=followers)
+![GitHub repo size](https://img.shields.io/github/repo-size/iyansr/novel-library-api)
 
 <p align="center">
   <a href="https://nodejs.org/">
@@ -93,9 +94,10 @@ $ npm run server
 
 ### **Genre**
 
-| Method | Endpoint   | Description    | Request Param | Request Body | Request Query |
-| ------ | ---------- | -------------- | ------------- | ------------ | ------------- |
-| GET    | /api/genre | Get All Genres | -             | -            | -             |
+| Method | Endpoint   | Description    | Request Param | Request Body              | Request Query |
+| ------ | ---------- | -------------- | ------------- | ------------------------- | ------------- |
+| GET    | /api/genre | Get All Genres | -             | -                         | -             |
+| POST   | /api/genre | Add New Genre  | -             | `genre`:STRING (Required) | -             |
 
 ---
 

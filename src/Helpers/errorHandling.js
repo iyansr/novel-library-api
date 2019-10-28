@@ -1,5 +1,5 @@
 module.exports = {
-  errorHandling: (body, res) => {
+  insertNovelErrorHandling: (body, res) => {
     if (!body.title) {
       res.json({
         message: 'Title is required'
@@ -18,6 +18,13 @@ module.exports = {
     if (!body.status) {
       res.json({
         message: 'Status is required'
+      });
+    }
+  },
+  insertGenreErrorHandling: (body, res) => {
+    if (!body.genre) {
+      res.json({
+        Message: 'Genre is required'
       });
     }
   }
