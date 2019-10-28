@@ -12,15 +12,22 @@ module.exports = {
   },
   addGenre: (req, res) => {
     const date = moment().format('YYYY-MM-DD HH:mm:ss');
-    const body = req.body;
+    const body = {
+      ...req.body,
+      created_at: date,
+      updated_at: date
+    };
     const genre = body.genre;
     genreModel
       .addGenre(genre, date, date, genre)
       .then(result => {
         if (result.affectedRows == 0) {
-          res.json({ message: `Genre ${genre} already exist` });
+          res.status(409).json({
+            status: 409,
+            message: `Genre ${genre} already exist`
+          });
         } else {
-          res.json(result);
+          responseHelper.responseCreatedNovel(res, 200, body);
         }
       })
       .catch(err => {
