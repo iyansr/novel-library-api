@@ -11,6 +11,9 @@ A Collection Of Novels API Using NodeJS MySQL ExpressJS
   <a href="http://opensource.org/licenses/MIT">
     <img title="MIT license" src="http://img.shields.io/badge/license-MIT-brightgreen.svg">
   </a>
+    <a href="#">
+    <img alt="David" src="https://img.shields.io/david/dev/iyansr/novel-library-api">
+  </a>
   <a href="#">
     <img title="Open Source Love" src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102">
   </a>
@@ -21,7 +24,7 @@ A Collection Of Novels API Using NodeJS MySQL ExpressJS
   <a href="#">
     <img title="Repo Size" src="https://img.shields.io/github/repo-size/iyansr/novel-library-api">
   </a>
-  
+
 </p>
 
 ## Table Of Contents
