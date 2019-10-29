@@ -10,7 +10,10 @@ module.exports = {
       .then(result =>
         result.length >= 1
           ? responseHelper.getResult(res, result, 200)
-          : res.json({ message: 'Cannot Find Spesific Novel' })
+          : res.status(404).json({
+              status: 404,
+              message: 'Cannot Find Spesific Novel'
+            })
       )
       .catch(err => console.log(err));
   },
@@ -60,9 +63,13 @@ module.exports = {
       .deleteNovel(id)
       .then(result => {
         if (result.affectedRows === 0) {
-          res.json({ message: `Cannot find id ${id}` });
+          res.status(404).json({
+            status: 404,
+            message: `Cannot find id ${id}`
+          });
         }
         res.json({
+          status: 200,
           message: 'Succes Delete '
         });
         console.log(result);
