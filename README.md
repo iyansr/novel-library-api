@@ -2,15 +2,26 @@
 
 A Collection Of Novels API Using NodeJS MySQL ExpressJS
 
-[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
-[![GitHub followers](https://img.shields.io/github/followers/iyansr?style=social)](https://github.com/iyansr?tab=followers)
-![GitHub repo size](https://img.shields.io/github/repo-size/iyansr/novel-library-api)
-
 <p align="center">
   <a href="https://nodejs.org/">
     <img title="Restful API" height='200' src="https://raw.githubusercontent.com/iyansr/novel-library-api/master/img.jpg">
   </a>
+</p>
+<p align="center">
+  <a href="http://opensource.org/licenses/MIT">
+    <img title="MIT license" src="http://img.shields.io/badge/license-MIT-brightgreen.svg">
+  </a>
+  <a href="#">
+    <img title="Open Source Love" src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102">
+  </a>
+  <a href="https://github.com/iyansr?tab=followers">
+    <img title="Followers" src="https://img.shields.io/github/followers/iyansr?style=social">
+  </a>
+  <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
+  <a href="#">
+    <img title="Repo Size" src="https://img.shields.io/github/repo-size/iyansr/novel-library-api">
+  </a>
+  
 </p>
 
 ## Table Of Contents
