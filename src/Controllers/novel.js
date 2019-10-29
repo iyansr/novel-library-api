@@ -48,7 +48,12 @@ module.exports = {
     novelModel
       .editNovel(body, body.id)
       .then(result => {
-        responseHelper.responseUdpateNovel(res, 200, body);
+        result.affectedRows === 0
+          ? res.status(404).json({
+              status: 404,
+              message: 'Cannot Find & Edit Spesific Novel'
+            })
+          : responseHelper.responseUdpateNovel(res, 200, body);
         console.log(result);
       })
       .catch(err => {
