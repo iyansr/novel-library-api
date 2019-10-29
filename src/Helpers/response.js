@@ -2,6 +2,7 @@ module.exports = {
   getResult: (res, result, status) => {
     const response = {
       status,
+      total: result.length,
       data: result
     };
     res.json(response);
