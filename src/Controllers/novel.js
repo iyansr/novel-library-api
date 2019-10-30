@@ -21,8 +21,8 @@ module.exports = {
     let date = moment().format('YYYY-MM-DD HH:mm:ss');
     let body = {
       ...req.body,
-      created_at: date,
-      updated_at: date
+      createdAt: date,
+      updatedAt: date
     };
 
     novelModel
@@ -43,7 +43,7 @@ module.exports = {
       id: parseInt(req.params.id),
       genre: parseInt(req.body.genre),
       status: parseInt(req.body.status),
-      updated_at: date
+      updatedAt: date
     };
     novelModel
       .editNovel(body, body.id)
