@@ -15,10 +15,10 @@ module.exports = {
         query += existingParam
           .map(field => {
             if (field === 'genre') {
-              field = 'g.genre_id';
+              field = 'g.id';
             }
             if (field === 'status') {
-              field = 's.status_id';
+              field = 's.id';
             }
 
             return `${field} LIKE ? `;
