@@ -10,7 +10,7 @@ module.exports = {
     return query;
   },
   genreQueryAdd: () => {
-    let q = `INSERT INTO genres (genre, created_at, updated_at)
+    let q = `INSERT INTO genres (genre, createdAt, updatedAt)
                   SELECT * FROM (SELECT ?, ? AS d1, ? ) AS tmp
                   WHERE NOT EXISTS (
                     SELECT genre FROM genres WHERE genre = ?

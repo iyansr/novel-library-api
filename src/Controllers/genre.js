@@ -14,8 +14,8 @@ module.exports = {
     const date = moment().format('YYYY-MM-DD HH:mm:ss');
     const body = {
       ...req.body,
-      created_at: date,
-      updated_at: date
+      createdAt: date,
+      updatedAt: date
     };
     const genre = body.genre;
     genreModel
