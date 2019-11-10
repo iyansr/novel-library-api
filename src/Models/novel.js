@@ -1,37 +1,37 @@
-const db = require('../Configs/db');
-const queryHelpers = require('../Helpers/query');
+const db = require("../Configs/db");
+const queryHelpers = require("../Helpers/query");
 
 module.exports = {
   getNovel: req => {
     return new Promise((resolve, reject) => {
       let query = queryHelpers.queryRead();
 
-      const existingParam = ['genre', 'status', 'title', 'author'].filter(
+      const existingParam = ["genre", "status", "title", "author"].filter(
         field => req.query[field]
       );
 
       if (existingParam.length) {
-        query += 'WHERE ';
+        query += "WHERE ";
         query += existingParam
           .map(field => {
-            if (field === 'genre') {
-              field = 'g.id';
+            if (field === "genre") {
+              field = "g.id";
             }
-            if (field === 'status') {
-              field = 's.id';
+            if (field === "status") {
+              field = "s.id";
             }
 
             return `${field} LIKE ? `;
           })
-          .join(' AND ');
-        query += 'ORDER BY b.id ASC';
+          .join(" AND ");
+        query += "ORDER BY b.id ASC";
       } else {
-        query += 'ORDER BY b.id ASC';
+        query += "ORDER BY b.id ASC";
       }
 
       db.query(
         query,
-        existingParam.map(field => req.query[field] + '%'),
+        existingParam.map(field => req.query[field] + "%"),
         (err, result) => {
           if (!err) {
             resolve(result);
@@ -42,9 +42,22 @@ module.exports = {
       );
     });
   },
+  getNovelByID: id => {
+    return new Promise((resolve, reject) => {
+      const query = queryHelpers.queryRead()
+
+      db.query(`${query} WHERE b.id = ?` , [id], (err, result) => {
+        if (!err) {
+          resolve(result);
+        } else {
+          reject(err);
+        }
+      });
+    });
+  },
   addNovel: body => {
     return new Promise((resolve, reject) => {
-      db.query('INSERT INTO novels SET ?', [body], (err, response) => {
+      db.query("INSERT INTO novels SET ?", [body], (err, response) => {
         if (!err) {
           resolve(response);
         } else {
@@ -68,7 +81,7 @@ module.exports = {
   },
   deleteNovel: id => {
     return new Promise((resolve, reject) => {
-      let query = 'DELETE FROM novels WHERE id = ?';
+      let query = "DELETE FROM novels WHERE id = ?";
       db.query(query, [id], (err, response) => {
         if (!err) {
           resolve(response);

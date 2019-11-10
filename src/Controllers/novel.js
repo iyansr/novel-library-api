@@ -17,6 +17,17 @@ module.exports = {
       )
       .catch(err => console.log(err));
   },
+  getNovelByID: (req, res) => {
+    const id = parseInt(req.params.id)
+    novelModel
+      .getNovelByID(id)
+      .then(result =>
+        
+           responseHelper.getResult(res, result, 200)
+          
+      )
+      .catch(err => console.log(err));
+  },
   addNovel: (req, res) => {
     let date = moment().format('YYYY-MM-DD HH:mm:ss');
     let body = {
