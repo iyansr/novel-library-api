@@ -18,14 +18,10 @@ module.exports = {
       .catch(err => console.log(err));
   },
   getNovelByID: (req, res) => {
-    const id = parseInt(req.params.id)
+    const id = parseInt(req.params.id);
     novelModel
       .getNovelByID(id)
-      .then(result =>
-        
-           responseHelper.getResult(res, result, 200)
-          
-      )
+      .then(result => responseHelper.getResult(res, result, 200))
       .catch(err => console.log(err));
   },
   addNovel: (req, res) => {
@@ -53,7 +49,7 @@ module.exports = {
       ...req.body,
       id: parseInt(req.params.id),
       genre: parseInt(req.body.genre),
-      status: parseInt(req.body.status),
+      novel_status: parseInt(req.body.novel_status),
       updatedAt: date
     };
     novelModel
@@ -73,7 +69,7 @@ module.exports = {
       });
   },
   deleteNovel: (req, res) => {
-    let id = parseInt(req.body.id);
+    let id = parseInt(req.params.id);
 
     novelModel
       .deleteNovel(id)
