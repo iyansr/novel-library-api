@@ -31,7 +31,7 @@ module.exports = {
 
       db.query(
         query,
-        existingParam.map(field => req.query[field] + "%"),
+        existingParam.map(field => "%" + req.query[field] + "%"),
         (err, result) => {
           if (!err) {
             resolve(result);
